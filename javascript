@@ -3006,15 +3006,6 @@ end
 
 local Draggable = getDragIt()
 
-Uis.InputBegan:Connect(function(Key)
-   if not Uis:GetFocusedTextBox() then
-       if Key.KeyCode == Enum.KeyCode[Key] then
-           CoreGui.Visible = not CoreGui.Visible
-           -- if you want to destroy it then this: CoreGui:Destroy()
-       end
-   end
-end)
-
 local function getEffect()
 
     local module = {}
