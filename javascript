@@ -3006,6 +3006,15 @@ end
 
 local Draggable = getDragIt()
 
+Uis.InputBegan:Connect(function(Key)
+   if not Uis:GetFocusedTextBox() then
+       if Key.KeyCode == Enum.KeyCode[Key] then
+           UILib.Visible = not UILib.Visible
+           -- if you want to destroy it then this: UILib:Destroy()
+       end
+   end
+end)
+
 local function getEffect()
 
     local module = {}
