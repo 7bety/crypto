@@ -3009,8 +3009,8 @@ local Draggable = getDragIt()
 Uis.InputBegan:Connect(function(Key)
    if not Uis:GetFocusedTextBox() then
        if Key.KeyCode == Enum.KeyCode[Key] then
-           UILibrary.Visible = not UILibrary.Visible
-           -- if you want to destroy it then this: UILibrary:Destroy()
+           CoreGui.Visible = not CoreGui.Visible
+           -- if you want to destroy it then this: CoreGui:Destroy()
        end
    end
 end)
